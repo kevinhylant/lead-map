@@ -1,0 +1,10 @@
+<h1>Home Page</h1>
+
+<h2>Get Started</h2>
+<%= form_for @sales_rep, :url => sales_reps_path do |f| %>
+  <%  f.hidden_field :sales_rep_id, :value => @sales_rep.id %>
+  <%= f.text_field :first_name, :placeholder => "First Name", :class => "login-field" %>
+  <%= f.text_field :last_name, :placeholder => "Last Name", :class => "login-field" %>
+  <%= f.text_field :email, :placeholder => "Email", :class => "login-field" %>
+  <%= f.submit "Submit", :placeholder => "submit-button" %>
+<% end %>
